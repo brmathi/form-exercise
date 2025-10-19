@@ -9,23 +9,17 @@
 <body>
     <header class="topbar" role="banner">
         <div class="container">
-            <h1 class="logo">Form</h1>
-            <p class="subtitle">Formulário de cadastro</p>
+            <h1 class="logo">Formulário</h1>
+            <p class="subtitle">Preenchimento para vaga de interesse</p>
         </div>
     </header>
     <main class="conteudo" id="conteudo" role="main">
         <div class="container">
-            <section aria-labelledby="titulo-instrucoes" class="bloco bloco--intro">
-                <h2 id="titulo-instrucoes">Como Funciona</h2>
-                <p>Este formulário demonstra boas práticas de marcação, acessibilidade e estilos.
-                    Preencha os campos e observe os diferentes estados (foco, erro, sucesso).
-                </p>
-            </section>
         <section aria-labelledby="titulo-form" class="bloco">
-            <h2 id="titulo-form">Fale Comigo</h2>
+            <h2 id="titulo-form">Formulário para vaga</h2>
             <form class="form-contato" action="#" method="post" aria-describedby="ajuda-form">
                 <p id="ajuda-form" class="ajuda">
-                    Campos marcados com * são obrigatórios.
+                    Os campos marcados com * são obrigatórios.
                 </p>
                 <div class="campo">
                     <label for="nome">Nome Completo *</label>
@@ -50,11 +44,23 @@
                     <small class="msg" aria-live="polite"></small>
                 </div>
                 <div class="campo">
-                    <label for="assunto">Assunto</label>
+                    <label for="telefone">Telefone *</label>
+                    <input
+                    type="text"
+                    name="telefone"
+                    id="telefone"
+                    placeholder="Ex.: (00)988888888"
+                    required
+                    autocomplete="telefone">
+                </div>
+                <div class="campo">
+                    <label for="areaInteresse">Área de Interesse</label>
                     <select id="assunto" name="assunto">
                         <option value="">Selecione...</option>
-                        <option value="duvida">Dúvida</option>
-                        <option value="orcamento">Orçamento</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="educacao">Educação</option>
+                        <option value="saude">Saúde</option>
+                        <option value="negocios">Negócios</option>
                         <option value="outros">Outros</option>
                     </select>
                     <small class="msg" aria-live="polite"></small>
@@ -75,10 +81,9 @@
                 </div>
                 <div class="acoes">
                     <button class="botao botao--primario" type="submit">Enviar</button>
-                    <button class="botao botao--fantasma" type="reset">Limpar</button>
                 </div>
-                <p class="dica-acessibilidade">
-                    Dica: use <kdb>Tab</kdb> para navegar pelos campos.
+                <p class="link-instituicao">
+                    <a href="https://newtonpaiva.br" target="_blank">Visite nossa Página</a>
                 </p>
             </form>
         </section>

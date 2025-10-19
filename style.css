@@ -2,13 +2,12 @@
 html, body {margin: 0; padding: 0;}
 img {max-width: 100%; display: block;}
 
+/*PARTE inst*/
 :root {
-    --bg: #0f1420;
     --surface: #141b2d;
     --border: #2a3248;
     --text: #e4e9f0;
     --muted: #b0b7c3;
-    --primary: #1bbf72;
     --primary-dark: #0e8f55;
     --ff: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
     --fs: 16px;
@@ -19,13 +18,18 @@ img {max-width: 100%; display: block;}
 }
 
 body {
-    background: var(--bg);
+    background: rgb(15, 20, 32);
+    background-image: url("img/imgWeb2");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--text);
     font: 400 1rem/var(--lh) var(--ff);
 }
 
 .container {
-    width: min(1000px, 92%);
+    width: min(1000px, 78%);
     margin-inline: auto;
 }
 
@@ -48,6 +52,7 @@ body {
 .logo {
     font: 80 1.25rem/1 var(--ff);
     letter-spacing: .5px;
+    font-variant: small-caps;
 }
 
 .subtitle {
@@ -78,10 +83,22 @@ body {
 h2 {
     margin: 0 0 .75rem;
     font: 700 1.4rem/ var(--ff);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
 }
 
 h1, h2, h3, h4 {
     scroll-margin-top: 6rem;
+}
+
+p {
+    text-indent: 10px;
+    text-align: left;
+}
+
+#titulo-form {
+    color: rgb(255, 255, 255);
 }
 
 .form-contato {
@@ -138,6 +155,7 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
 }
 
+/*PARTE BOTOES*/
 .botao {
     display: inline-block;
     padding: .75rem 1rem;
@@ -149,8 +167,7 @@ h1, h2, h3, h4 {
 }
 
 .botao--primario {
-    background: var(--primary);
-    color: #0b1a14;
+    background-color: #1bbf72;
 }
 
 .botao--primario:hover {
@@ -158,18 +175,18 @@ h1, h2, h3, h4 {
     transform: translateY(-2px);
 }
 
-.botao--fantasma {
-    background: transparent;
-    color: var(--text);
-    border-color: var(--border);
-}
-
-.botao--fantasma:hover {
-    background: #0d1220;
-}
-
 .dica-acessibilidade {
     color: var(--muted);
     margin: .25rem 0 0;
     font-size: .95rem;
+} 
+
+.link-instituicao a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 500;
+}
+
+.link-instituicao a:hover {
+    text-decoration: underline;
 }
