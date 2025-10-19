@@ -2,12 +2,12 @@
 html, body {margin: 0; padding: 0;}
 img {max-width: 100%; display: block;}
 
-/*PARTE inst*/
+/*PARTE inst e tipos*/
 :root {
-    --surface: #141b2d;
+    --surface: #000000;
     --border: #2a3248;
     --text: #e4e9f0;
-    --muted: #b0b7c3;
+    --muted: #dadada;
     --primary-dark: #0e8f55;
     --ff: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
     --fs: 16px;
@@ -17,6 +17,7 @@ img {max-width: 100%; display: block;}
     --gap: 1rem;
 }
 
+/*BASE E IMAGEM*/
 body {
     background: rgb(15, 20, 32);
     background-image: url("img/imgWeb2");
@@ -29,14 +30,15 @@ body {
 }
 
 .container {
-    width: min(1000px, 78%);
+    width: min(1000px, 92%);
     margin-inline: auto;
 }
 
+/*CABEÇALHO*/
 .topbar {
     position: sticky;
     top: 0;
-    background: rgb(15, 20, 32, .8);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--border);
     z-index: 10;
@@ -80,6 +82,7 @@ body {
     border-style: dashed;
 }
 
+/*TITULOS ATE #TITULO-FORM*/
 h2 {
     margin: 0 0 .75rem;
     font: 700 1.4rem/ var(--ff);
@@ -101,6 +104,7 @@ p {
     color: rgb(255, 255, 255);
 }
 
+/*PARTE FORMULARIO*/
 .form-contato {
     display: grid;
     gap: 1rem;
@@ -128,7 +132,7 @@ p {
 .form-contato textarea {
     width: 100%;
     border: 1px solid var(--border);
-    background: #0d1220;
+    background: #414141;
     color: var(--text);
     padding: .75rem .9rem;
     border-radius: 10px;
@@ -175,12 +179,7 @@ p {
     transform: translateY(-2px);
 }
 
-.dica-acessibilidade {
-    color: var(--muted);
-    margin: .25rem 0 0;
-    font-size: .95rem;
-} 
-
+/*PARTE LINk*/
 .link-instituicao a {
     text-decoration: none;
     color: blue;
